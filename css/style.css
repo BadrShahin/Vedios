@@ -1,0 +1,153 @@
+body{
+	width: 100%;
+	height: 100%;
+	padding: 3% 10%;
+	font-size: 20px;
+	background-color: #222;
+	font-family: "Times New Roman", Serif, sans-serif;
+}
+#search input{
+	height: 35px;
+	border: none;
+	margin-left: 2%;
+	margin-top: 1%;
+}
+#login{
+	height: 35px;
+	margin-top: 1%;
+	text-align: center;
+	padding: 0 1%;
+	font-size: 25px;
+	text-decoration: none;
+	background-color: #DDD;
+}
+#menu{
+	padding: 3% 0;
+}
+#menu a{
+	padding: 1%;
+	font-size: 24px;
+	font-weight: bold;
+	border: 2px dotted #333;
+	text-decoration: none;
+}
+#menu a:hover{
+	background-color: #EEE;
+}
+#slider, #animation, #hr{
+	background-color: #DDD;
+}
+#categories, #animation, #music{
+	padding-bottom: 3%;
+	background-color: #EEE;
+}
+#categories_section, #animation_section, #music_section{
+	margin-top: 3%;
+}
+#categories_div, #animation_div, #music_div{
+	border: 5px solid #FFF;
+	box-shadow: 5px 5px 5px #777;
+}
+#categories_div a{
+	text-decoration: none;
+}
+#categories_div img:hover{
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+}
+#animation_div object:hover, #music_div object:hover{
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+hr{
+	width: 100%;
+}
+#footer{
+	color: #DDD;
+	padding: 5% 0 3% 0;
+	background-color: #2E2E2E;
+}
+#terms{
+	margin: 3% 0 0 0;
+	line-height: 40px;
+}
+#terms a{
+	cursor: pointer;
+	margin: 0 0 0 5%;
+	text-decoration: none;
+}
+/* Style all font awesome icons */
+.fa{
+    width: 35px;
+	float: right;
+	height: 35px;
+	color: #48171a;
+	font-size: 15px;
+	padding-top: 2%;
+    text-align: center;
+	margin: 25% 2% 0 2%;
+	border-radius: 30px;
+    display: inline-block;
+	background-color:#ffacaa;
+}
+#log{
+	margin: 5% 0 0 0;
+}
+#sign{
+	margin: 5% 0 0 0;
+}
+#login_section, #signup_section{
+	color: #DDD;
+}
+#login_form, #signup_form{
+	padding: 8%;
+	border: 3px solid #DDD;
+	background-color: #353535;
+	box-shadow: 2px 2px 2px 2px #FFF;
+}
+#login_form input[type=text], input[type=password], input[type=email], input[type=tel],
+#signup_form input[type=text], input[type=password], input[type=email], input[type=tel]{
+	padding: 1%;
+	margin: 3% 0;
+	border: none;
+	border-bottom: 2px solid #DDD;
+	background-color: unset;
+}
+#login_form input[type=submit],
+#signup_form input[type=submit]{
+	float: right;
+	font-size: 25px;
+	color: #333;
+	margin: 7% 0 2% 0;
+	padding: 1% 4%;
+	border: 2px solid blue;
+	border-radius: 50%;
+}
+#login_form input[type=submit]:hover,
+#signup_form input[type=submit]:hover{
+	color: #DDD;
+	background-color: green;
+	border: 2px solid #DDD;
+}
+#contact{
+	color: #DDD;
+	padding-top: 3%;
+	background-color: #2E2E2E;
+}
+#contact_form{
+	margin: 3%;
+}
+#contact_section textarea, input{
+    margin-top: 3%;
+}
+#contact_section input, textarea{
+    background-color: unset;
+}
+#contact_section #submit{
+	height: 40px;
+	border: none;
+	margin: 4% 0;
+	padding: 5px 2%;
+	border-radius: 50px;
+	background-color: #11749e;
+}

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Online Media</title>
+	<style type="text/css">
+		
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Rochester" rel="stylesheet">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+	<header class="row">
+		<article class="row">
+			<img class="col-md-3 img-responsive" src="media/images/logo.png" alt="vedio logo">
+			<form class="col-md-7" id="search">
+				<input class="col-md-8" type="search" name="search" placeholder="search...">
+				<input class="col-md-2" type="submit" name="submit" value="search" id="search_button">
+			</form>
+			<a class="col-md-1" id="login" href="includes/login.html">LOGIN</a>
+		</article>
+		<article class="row">
+			<nav class="text-uppercase" id="menu">
+				<a href="#">Home</a>
+				<a href="#">About</a>
+				<a href="#categories">Vedios</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</article>
+	</header>
+	<article class="row" id="content">
+
+		<!-- ARTICLE 1 SLIDER SHOW --> 
+
+		<article class="row" id="slider">
+			<section class="slider">
+				<video controls>
+					<source src="media/vedio/movie.mp4" type="video/mp4">
+					<source src="media/vedio/movie.ogg" type="video/ogg">
+				</video>
+			</section>
+
+			<section class="slider">
+				<video controls>
+					<source src="media/vedio/movie1.mp4" type="video/mp4">
+					<source src="media/vedio/movie1.ogg" type="video/ogg">
+				</video>
+			</section>
+
+			<section class="slider">
+				<video controls>
+					<source src="media/vedio/movie1.mp4" type="video/mp4">
+					<source src="media/vedio/movie1.ogg" type="video/ogg">
+				</video>
+			</section>
+
+			<section class="slider">
+				<video controls>
+					<source src="media/vedio/movie.mp4" type="video/mp4">
+					<source src="media/vedio/movie.ogg" type="video/ogg">
+				</video>
+			</section>
+
+			<div class="col-md-6">
+				<button id="left_button" onclick="plusDivs(-1)">&#10094;</button>
+			</div>
+			
+			<div class="col-md-6">
+				<button id="right_button" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+		</article>
+
+		<!-- END OF ARTICLE 1 --> 
+
+		<!-- ARTICLE 2 CATEGORIES --> 
+
+		<article class="row" id="categories">
+			<h2 class="text-center text-uppercase"><strong>all categories</strong></h2>
+			<section class="col-md-3" id="categories_section">
+				<div id="categories_div">
+					<a href="#animation">
+						<div>
+							<picture>
+								<img class="img-responsive" src="media/images/pic_1.jpg" alt="animation">
+							</picture>
+							<h4 class="text-center text-uppercase">Animation</h4>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<section class="col-md-3" id="categories_section">
+				<div id="categories_div">
+					<a href="#">
+						<div>
+							<picture>
+								<img class="img-responsive" src="media/images/pic_2.jpg" alt="animation">
+							</picture>
+							<h4 class="text-center text-uppercase">Arts & Design</h4>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<section class="col-md-3" id="categories_section">
+				<div id="categories_div">
+					<a href="#">
+						<div>
+							<picture>
+								<img class="img-responsive" src="media/images/pic_3.jpg" alt="animation">
+							</picture>
+							<h4 class="text-center text-uppercase">Holy Quran</h4>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<section class="col-md-3" id="categories_section">
+				<div id="categories_div">
+					<a href="#">
+						<div>
+							<picture>
+								<img class="img-responsive" src="media/images/pic_4.jpg" alt="animation">
+							</picture>
+							<h4 class="text-center text-uppercase">Comdey</h4>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<section class="col-md-3" id="categories_section">
+				<div id="categories_div">
+					<a href="#music">
+						<div>
+							<picture>
+								<img class="img-responsive" src="media/images/pic_5.jpg" alt="animation">
+							</picture>
+							<h4 class="text-center text-uppercase">Music</h4>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<section class="col-md-3" id="categories_section">
+				<div id="categories_div">
+					<a href="#">
+						<div>
+							<picture>
+								<img class="img-responsive" src="media/images/pic_6.jpg" alt="animation">
+							</picture>
+							<h4 class="text-center text-uppercase">Sports</h4>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<section class="col-md-3" id="categories_section">
+				<div id="categories_div">
+					<a href="#">
+						<div>
+							<picture>
+								<img class="img-responsive" src="media/images/pic_7.jpg" alt="animation">
+							</picture>
+							<h4 class="text-center text-uppercase">Fashion</h4>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<section class="col-md-3" id="categories_section">
+				<div id="categories_div">
+					<a href="#">
+						<div>
+							<picture>
+								<img class="img-responsive" src="media/images/pic_8.jpg" alt="animation">
+							</picture>
+							<h4 class="text-center text-uppercase">Food</h4>
+						</div>
+					</a>
+				</div>
+			</section>
+		</article>
+
+		<!-- END OF ARTICLE 2 -->
+
+		<article class="row" id="hr">
+			<hr>
+		</article>
+
+		<!-- ARTICLE 3 ANIMATION -->
+
+		<article class="row" id="animation">
+			<h2 class="text-center text-uppercase"><strong>animation</strong></h2>
+
+			<section class="col-md-9" id="animation_section" >
+				<div id="animation_div">
+					<div class="embed-responsive embed-responsive-16by9">
+						<video controls>
+							<source class="embed-responsive-item" src="https://openload.co/stream/xhude5GJecM~1508791393~41.46.0.0~zc3dLuU1?mime=true">
+						</video>
+					</div>
+				</div>
+			</section>
+			<section class="col-md-3" id="animation_section">
+				<div id="animation_div">
+					<div class="embed-responsive embed-responsive-16by9">
+						<video controls class="embed-responsive-item">
+							<source src="https://openload.co/stream/jmHlSqKPeNI~1508791524~41.46.0.0~oYvCLZo3?mime=true">
+						</vedio>
+					</div>
+				</div>
+			</section>
+			<section class="col-md-3" id="animation_section">
+				<div id="animation_div">
+					<div class="embed-responsive embed-responsive-16by9">
+						<video controls class="embed-responsive-item">
+							<source src="https://openload.co/stream/jmHlSqKPeNI~1508791524~41.46.0.0~oYvCLZo3?mime=true">
+						</vedio>
+					</div>
+				</div>
+			</section>
+			<section class="col-md-3" id="animation_section">
+				<div id="animation_div">
+					<div class="embed-responsive embed-responsive-16by9">
+						<video controls class="embed-responsive-item">
+							<source src="https://openload.co/stream/jmHlSqKPeNI~1508791524~41.46.0.0~oYvCLZo3?mime=true">
+						</vedio>
+					</div>
+				</div>
+			</section>
+			<section class="col-md-3" id="animation_section">
+				<div id="animation_div">
+					<div class="embed-responsive embed-responsive-16by9">
+						<video controls class="embed-responsive-item">
+							<source src="https://openload.co/stream/jmHlSqKPeNI~1508791524~41.46.0.0~oYvCLZo3?mime=true">
+						</vedio>
+					</div>
+				</div>
+			</section>
+			<section class="col-md-3" id="animation_section">
+				<div id="animation_div">
+					<div class="embed-responsive embed-responsive-16by9">
+						<video controls class="embed-responsive-item">
+							<source src="https://openload.co/stream/jmHlSqKPeNI~1508791524~41.46.0.0~oYvCLZo3?mime=true">
+						</vedio>
+					</div>
+				</div>
+			</section>
+			<section class="col-md-3" id="animation_section">
+				<div id="animation_div">
+					<div class="embed-responsive embed-responsive-16by9">
+						<video controls class="embed-responsive-item">
+							<source src="https://openload.co/stream/jmHlSqKPeNI~1508791524~41.46.0.0~oYvCLZo3?mime=true">
+						</vedio>
+					</div>
+				</div>
+			</section>
+			<section class="col-md-3" id="animation_section">
+				<div id="animation_div">
+					<div class="embed-responsive embed-responsive-16by9">
+						<video controls class="embed-responsive-item">
+							<source src="https://openload.co/stream/jmHlSqKPeNI~1508791524~41.46.0.0~oYvCLZo3?mime=true">
+						</vedio>
+					</div>
+				</div>
+			</section>
+		</article>
+		<!-- END OF ARTICLE 3 -->
+
+		<article class="row" id="hr">
+			<hr>
+		</article>
+
+		<!-- ARTICLE 7 Music -->
+
+		<article class="row" id="music">
+			<h2 class="text-center text-uppercase"><strong>Music</strong></h2>
+
+			<section class="col-md-9" id="music_section" >
+				<div id="music_div">
+					<a href="">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/ceVKfi4noXM"></object>
+						</div>
+					</a>
+				</div>
+			</section>
+			<section class="col-md-3" id="music_section">
+				<div id="music_div">
+					<a href="">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/sSgPDKG6bB0"></object>
+						</div>
+					</a>
+				</div>
+			</section>
+			<section class="col-md-3" id="music_section">
+				<div id="music_div">
+					<a href="">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/RCMXO9sBIcU"></object>
+						</div>
+					</a>
+				</div>
+			</section>
+			<section class="col-md-3" id="music_section">
+				<div id="music_div">
+					<a href="">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/8DSeZji2x-Y"></object>
+						</div>
+					</a>
+				</div>
+			</section>
+			<section class="col-md-3" id="music_section">
+				<div id="music_div">
+					<a href="">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/HEf_xrgmuRI"></object>
+						</div>
+					</a>
+				</div>
+			</section>
+			<section class="col-md-3" id="music_section">
+				<div id="music_div">
+					<a href="">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/odZJMAy4JKE"></object>
+						</div>
+					</a>
+				</div>
+			</section>
+			<section class="col-md-3" id="music_section">
+				<div id="music_div">
+					<a href="">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/-5qhNRmMilI"></object>
+						</div>
+					</a>
+				</div>
+			</section>
+			<section class="col-md-3" id="music_section">
+				<div id="music_div">
+					<a href="">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/Ar7nVbjAsEw"></object>
+						</div>
+					</a>
+				</div>
+			</section>
+		</article>
+		<!-- END OF ARTICLE 7 -->
+
+		<article class="row" id="hr">
+			<hr>
+		</article>
+		
+		<!-- ARTICLE 7 CONTACT ME --> 
+		
+		<article class="row" id="contact">
+			<section id="contact_section">
+				<h1 class="row text-center text-uppercase"> I'd love to hear about my project.</h1>
+				<form class="row" id="contact_form">
+					<section class="col-md-4">
+						<input class="col-md-12" type="text" name="name" placeholder="Name">
+					</section>
+					<section class="col-md-4">
+						<input class="col-md-12" type="text" name="email" placeholder="Email">
+					</section>
+					<section class="col-md-4">
+						<input class="col-md-12" type="text" name="phone" placeholder="Phone"><br>
+					</section>
+					<section class="col-md-12">
+						<textarea class="col-md-12" name="message" placeholder="Message" rows="6"></textarea>
+					</section>
+					<section class="col-md-12" >
+						<input id="submit" type="submit" name="submit" value="SUBMIT">
+					</section>
+				</form>
+			</section>
+		</article>
+
+		<!-- END OF ARTICLE 7 -->
+		<article class="row" id="hr">
+			<hr>
+		</article>
+	</article>
+
+	<footer class="row">
+		<article class="row" id="footer">
+			<section class="col-md-7">
+				<h4 style="display: inline-block;"><strong><a style="text-decoration: none;">&copy; All rights reserved, Badr Shahin 2017 - 2018.</a></strong></h4>
+				<nav id="terms">
+					<a>Terms & condition</a>
+					<a>Feedback</a><br>
+					<a>Question & answers</a>
+					<a>User agreement</a><br>
+				</nav>
+			</section>
+			<section class="col-md-5" id="social_icons">
+				<!-- Add font awesome icons -->
+				<a class="fa fa-github" href="https://github.com/BadrShahin" target="_blank"></a>
+				<a class="fa fa-google" href="https://plus.google.com/u/0/+BadrShahin" target="_blank"></a>
+				<a class="fa fa-linkedin" href="https://www.linkedin.com/in/badr-shahin-968997b5/" target="_blank"></a>
+				<a class="fa fa-facebook-f" href="https://www.facebook.com/BadrShahin95" target="_blank"></a>
+				<a class="fa fa-twitter" href="https://twitter.com/ShahinBadr" target="_blank"></a>
+			</section>
+		</article>
+	</footer>
+	<script type="text/javascript">
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+		    showDivs(slideIndex += n); 
+		}
+
+		function showDivs(n) {
+		    var i;
+		    var x = document.getElementsByClassName("slider");
+		    if (n > x.length) {slideIndex = 1} 
+		    if (n < 1) {slideIndex = x.length} ;
+		    for (i = 0; i < x.length; i++) {
+		        x[i].style.display = "none"; 
+		    }
+		    x[slideIndex-1].style.display = "block"; 
+		}
+	</script>
+</body>
+</html>
