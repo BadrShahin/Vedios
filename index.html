@@ -8,7 +8,6 @@
 	<!-- Add icon library -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Rochester" rel="stylesheet">
 	<style>
 		/* img container */
@@ -137,11 +136,15 @@
 <body>
 	<header class="row">
 		<article class="row">
-			<img class="col-md-3 img-responsive" src="media/images/logo.png" alt="vedio logo">
-			<form class="col-md-8" id="search">
-				<input class="row col-md-8" type="search" name="search" placeholder="search...">
-				<button class="col-md-2" type="button" name="search" id="search_button">search</button>
-			</form>
+			<div style="display: inline;">
+				<!--	<img class="col-md-3 img-responsive" src="media/images/logo.png" alt="vedio logo"> -->
+				<h1 class="online text-capitalize" id="online">online media</h1>
+				<form class="col-md-8" id="search" style="margin: 2% 0 0 0;">
+					<input class="row col-md-8" type="search" name="search" placeholder="search...">
+					<button class="col-md-2" type="button" name="search" id="search_button">search</button>
+				</form>
+			</div>
+		
 			<div id="displayLoginForm" class="modal">
 			  
 				<form class="modal-content animate">
@@ -191,13 +194,13 @@
 			</div>
 		</article>
 		<article class="row">
-			<nav class="topnav text-uppercase" id="menu">
+			<nav class="topnav" id="menu">
 				<a href="#">Home</a>
 				<a href="#">About</a>
 				<a href="#categories">Vedios</a>
 				<a href="#contact">Contact</a>
-				<a><button onclick="document.getElementById('displayLoginForm').style.display='block'" style="width: auto;" class="home_login text-uppercase">Login</button></a>
-				<a><button onclick="document.getElementById('displaySignForm').style.display='block'" style="width: auto;" class="home_sign text-uppercase">sign up</button></a>
+				<a><button onclick="document.getElementById('displayLoginForm').style.display='block'" style="width: auto;" class="home_login">Login</button></a>
+				<a><button onclick="document.getElementById('displaySignForm').style.display='block'" style="width: auto;" class="home_sign">Signup</button></a>
 			    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 			</nav>
 		</article>
@@ -598,7 +601,7 @@
 		
 		<article class="row" id="contact">
 			<section id="contact_section">
-				<h1 class="row text-center text-uppercase"> I'd love to hear about my project.</h1>
+				<h1 class="row text-center text-uppercase" id="hear"> I'd love to hear about my project.</h1>
 				<form class="row" id="contact_form">
 					<section class="col-md-4">
 						<input class="col-md-12" type="text" name="name" placeholder="Name">
@@ -628,7 +631,7 @@
 	<footer class="row">
 		<article class="row" id="footer">
 			<section class="col-md-7">
-				<h4 style="display: inline-block;"><strong><a style="text-decoration: none;">&copy; All rights reserved, Badr Shahin 2017 - 2018.</a></strong></h4>
+				<h4 style="display: inline-block;" id="rights"><strong><a style="text-decoration: none;" >&copy; All rights reserved, Badr Shahin 2017 - 2018.</a></strong></h4>
 				<nav id="terms">
 					<a>Terms & condition</a>
 					<a>Feedback</a><br>
@@ -659,6 +662,22 @@
 		    if (event.target == signModal) {
 		    	 signModal.style.display = "none";
 		    }
+		}
+	</script>
+	<script type="text/javascript">
+		var slideIndex = 0;
+		carousel();
+
+		function carousel() {
+		    var i;
+		    var x = document.getElementsByClassName("slider");
+		    for (i = 0; i < x.length; i++) {
+		      x[i].style.display = "none"; 
+		    }
+		    slideIndex++;
+		    if (slideIndex > x.length) {slideIndex = 1} 
+		    x[slideIndex-1].style.display = "block"; 
+		    setTimeout(carousel, 2000); // Change image every 2 seconds
 		}
 	</script>
 </body>
