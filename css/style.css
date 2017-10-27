@@ -7,44 +7,46 @@ body{
 	font-family: "Times New Roman", Serif, sans-serif;
 }
 #search input{
-	height: 35px;
+	margin: 0 0 0 5%;
 	border: none;
-	margin-left: 2%;
-	margin-top: 1%;
+	padding: 8px;
+	padding-left: 3%;
+	border-radius: 50px;
 }
-#login{
-	height: 35px;
-	margin-top: 1%;
-	text-align: center;
-	padding: 0 1%;
-	font-size: 25px;
-	text-decoration: none;
-	background-color: #DDD;
+#search_button{
+	float: left;
+	margin-left: 1%;
+	border-radius: 50px;
 }
-#menu{
-	padding: 3% 0;
+input[type=search]{
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
 }
-#menu a{
-	padding: 1%;
-	font-size: 24px;
-	font-weight: bold;
-	border: 2px dotted #333;
-	text-decoration: none;
-}
-#menu a:hover{
-	background-color: #EEE;
+/* When the input field gets focus, change its width to 100% */
+input[type=search]:focus{
+    width: 60%;
 }
 #slider, #animation, #hr{
 	background-color: #DDD;
 }
-#categories, #animation, #music{
+#slider{
+	width: 100%;
+}
+#slider_div{
+	width: 500px;
+}
+#slider_vedio{
+	width: 500px;
+}
+#categories, #animation, #holy, #music{
 	padding-bottom: 3%;
 	background-color: #EEE;
 }
-#categories_section, #animation_section, #music_section{
+#categories_section, #animation_section, #holy_section, #music_section{
 	margin-top: 3%;
 }
-#categories_div, #animation_div, #music_div{
+#categories_div, #animation_div, #holy_div, #music_div{
 	border: 5px solid #FFF;
 	box-shadow: 5px 5px 5px #777;
 }
@@ -55,7 +57,7 @@ body{
 	opacity: 0.2;
 	filter: alpha(opacity=20);
 }
-#animation_div object:hover, #music_div object:hover{
+#animation_div object:hover, #holy_div object:hover, #music_div object:hover{
 	opacity: 0.7;
 	filter: alpha(opacity=70);
 }
@@ -90,45 +92,6 @@ hr{
     display: inline-block;
 	background-color:#ffacaa;
 }
-#log{
-	margin: 5% 0 0 0;
-}
-#sign{
-	margin: 5% 0 0 0;
-}
-#login_section, #signup_section{
-	color: #DDD;
-}
-#login_form, #signup_form{
-	padding: 8%;
-	border: 3px solid #DDD;
-	background-color: #353535;
-	box-shadow: 2px 2px 2px 2px #FFF;
-}
-#login_form input[type=text], input[type=password], input[type=email], input[type=tel],
-#signup_form input[type=text], input[type=password], input[type=email], input[type=tel]{
-	padding: 1%;
-	margin: 3% 0;
-	border: none;
-	border-bottom: 2px solid #DDD;
-	background-color: unset;
-}
-#login_form input[type=submit],
-#signup_form input[type=submit]{
-	float: right;
-	font-size: 25px;
-	color: #333;
-	margin: 7% 0 2% 0;
-	padding: 1% 4%;
-	border: 2px solid blue;
-	border-radius: 50%;
-}
-#login_form input[type=submit]:hover,
-#signup_form input[type=submit]:hover{
-	color: #DDD;
-	background-color: green;
-	border: 2px solid #DDD;
-}
 #contact{
 	color: #DDD;
 	padding-top: 3%;
@@ -150,4 +113,59 @@ hr{
 	padding: 5px 2%;
 	border-radius: 50px;
 	background-color: #11749e;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+	padding: 3% 0;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    padding: 1%;
+	font-size: 24px;
+	font-weight: bold;
+    text-align: center;
+	text-decoration: none;
+	border: 2px dotted #333;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+	opacity: 0.7;
+	background-color: #ccc;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* When the screen is less than 600 pixels wide.Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  	.topnav a {display: none;}
+  	.topnav a.icon {
+	    float: right;
+	    display: block;
+	}
+	input[type=search]:focus{
+		width: 40%;
+	}
+	#search_button{
+	  	width: 30%;
+	}
+}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
