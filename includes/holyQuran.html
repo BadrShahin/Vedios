@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Holy Quran</title>
+	<link rel="stylesheet" type="text/css" href="..\css/bootstrap.min.css">
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="..\css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Rochester" rel="stylesheet">
+	<!--<link href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet' type='text/css'>-->
+
+	<style>
+
+		.holy{
+			display: none;
+		}
+		/* img container */
+		.imgcontainer{
+			margin: 3% 0;
+			text-align: center;
+			position: relative;
+		}
+		img.avatar{
+			width: 30%;
+			border-radius: 50%;
+		}
+		#container {
+		    padding: 3% 5%;
+		}
+		#container1 {
+		    padding: 1% 5% 6% 5%;
+		}
+		/* input container */ 
+		input[type=text], input[type=password], input[type=email], input[type=tel] {
+		    width: 100%;
+			padding: 5px;
+			margin: 2% 0;
+			border: none;
+			display: inline-block;
+			background-color: unset;
+			border-bottom: 2px solid #CCC;
+		    box-sizing: border-box;
+		}
+		/* Set a style for all buttons */
+		button {
+			width: 100%;
+		    float: right;
+			border: none;
+			padding: 5px;
+			font-size: 25px;
+		    background-color: #11749e;
+		}
+		button:hover {
+		    opacity: 0.7;
+		}
+		.home_login, .home_sign{
+			float: none;
+			border: none;
+			padding: 0 1%;
+			background-color: unset;
+		}
+		.login, .sign{
+			margin: 2% 0;
+		}
+		#checked{
+			margin: 0 0 2% 0;
+		}
+		.cancelbtn{
+			width: auto;
+			float: left;
+		    padding: 5px 2%;
+		    background-color: #f44336;
+		}
+		span.password{
+		    float: right;
+		    padding-top: 1%;
+		}
+
+		/* modal */
+		.modal{
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			display: none;
+			overflow: auto;
+			position: fixed;
+		}
+		/* modal content */
+		.modal-content{
+			width:80%;
+			margin: 1% auto 15% auto;
+    		border: 1px solid #888;
+		}
+		/* The Close Button (x) */
+		.close{
+		    top: 0;
+		    right: 2%;
+		    color: #000;
+		    font-size: 35px;
+		    font-weight: bold;
+		    position: absolute;
+		}
+		.close:hover,
+		.close:focus {
+		    color: red;
+		}
+
+		/* Add Zoom Animation */
+		.animate {
+		    -webkit-animation: animatezoom 0.6s;
+		    animation: animatezoom 0.6s
+		}
+
+		@-webkit-keyframes animatezoom {
+		    from {-webkit-transform: scale(0)} 
+		    to {-webkit-transform: scale(1)}
+		}
+		    
+		@keyframes animatezoom {
+		    from {transform: scale(0)} 
+		    to {transform: scale(1)}
+		}
+
+		/* Change styles for span and cancel button on extra small screens */
+		@media screen and (max-width: 600px) {
+		    .cancelbtn , .password{
+		    	font-size: 12px;
+		    	padding: 0;
+		    }
+		}
+		@media screen and (max-width: 300px) {
+		    span.password {
+		       display: block;
+		       float: none;
+		    }
+		    .cancelbtn {
+		       width: 100%;
+		    }
+		}
+	</style>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="..\js/js.js"></script>
+</head>
+<body>
+	<header class="row">
+		<article class="row">
+			<div style="display: inline;">
+				<!--	<img class="col-md-3 img-responsive" src="media/images/logo.png" alt="vedio logo"> -->
+				<h1 class="online text-capitalize" id="online">online media</h1>
+				<form class="col-md-8" id="search" style="margin: 2% 0 0 0;">
+					<input class="fa fa-search"  type="search" name="search" placeholder="search...">
+					<!--<input class="row col-md-8" type="search" name="search" placeholder="search...">
+					<button class="col-md-2" type="button" name="search" id="search_button">search</button>-->
+				</form>
+			</div>
+		
+			<div id="displayLoginForm" class="modal">
+			  
+				<form class="modal-content animate">
+				    <div class="imgcontainer">
+				    	<span onclick="document.getElementById('displayLoginForm').style.display='none'" class="close" title="Close Modal">&times;</span>
+				    	<img src="..\media/images/img_avatar2.png" alt="Avatar" class="avatar">
+				    </div>
+
+				    <div id="container">
+				    	<input type="text" name="username" placeholder="Username" required>
+
+						<input type="password" name="password" placeholder="Password" required>
+				    	<button type="submit" class="login">Login</button>
+				    	<input type="checkbox" checked="checked" id="checked"> Remember me
+				    	<div id="container1" style="background-color:#f5f5f5">
+				    		<button type="button" onclick="document.getElementById('displayLoginForm').style.display='none'" class="cancelbtn">Cancel</button>
+				    		<span class="password">Forgot <a href="#">password?</a></span>
+			    		</div>
+				    </div>
+				</form>
+			</div>
+			<div id="displaySignForm" class="modal">
+				<form class="modal-content animate">
+				    <div class="imgcontainer">
+				    	<span onclick="document.getElementById('displaySignForm').style.display='none'" class="close" title="Close Modal">&times;</span>
+				    	<img src="..\media/images/img_avatar2.png" alt="Avatar" class="avatar">
+				    </div>
+
+				    <div id="container">
+				    	<input type="text" name="fname" placeholder="First Name" required>
+						<input type="text" name="lname" placeholder="Last Name" required>
+						<input type="email" name="email" placeholder="Email" required>
+						<input type="tel" name="tel" placeholder="Mobile" required>
+						<input type="text" name="username" placeholder="Username" required>
+						<input type="password" name="password" placeholder="Password" required>
+						<input type="password" name="confirm_password" placeholder="Confirm Password" required>
+						<button type="submit" class="sign">Sign up</button>
+				    	<input type="checkbox" checked="checked" id="checked"> Remember me
+
+						<div id="container1" style="background-color:#f5f5f5">
+				    		<button type="button" onclick="document.getElementById('displaySignForm').style.display='none'" class="cancelbtn">Cancel</button>
+				    		<span class="password">Forgot <a href="#">password?</a></span>
+				    	</div>
+				    </div>
+
+				</form>
+			</div>
+		</article>
+		<article class="row">
+			<nav class="topnav" id="menu">
+				<a href="..\index.html">Home</a>
+				<a href="#">About</a>
+				<a href="#categories">Vedios</a>
+				<a href="#contact">Contact</a>
+				<a><button onclick="document.getElementById('displayLoginForm').style.display='block'" style="width: auto;" class="home_login">Login</button></a>
+				<a><button onclick="document.getElementById('displaySignForm').style.display='block'" style="width: auto;" class="home_sign">Signup</button></a>
+			    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+			</nav>
+		</article>
+	</header>
+	<article class="row" id="content">
+		<article class="row" id="holy_quran">
+			<article class="holy" id="holy">
+				<h2 class="text-center text-uppercase"><strong>Holy Quran</strong></h2>
+
+				<section class="col-md-6" id="holy_section" >
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/gVBlpJ7nVeE?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-6" id="holy_section">
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/_Nlpl5OwvZc?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-6" id="holy_section">
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/SWHHxm8eR-U?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-6" id="holy_section">
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/3RC4e_czvUU?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-6" id="holy_section">
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/L98F_gN5ujU?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-6" id="holy_section">
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/PzG9uUcKpH0?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-6" id="holy_section">
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/qZLH7Jli1b0?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-6" id="holy_section">
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/68w22BM8oF0?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-6" id="holy_section" >
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/gVBlpJ7nVeE?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-6" id="holy_section">
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/_Nlpl5OwvZc?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-6" id="holy_section">
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/SWHHxm8eR-U?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-6" id="holy_section">
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/3RC4e_czvUU?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-6" id="holy_section">
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/L98F_gN5ujU?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-6" id="holy_section">
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/PzG9uUcKpH0?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-6" id="holy_section">
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/qZLH7Jli1b0?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+				<section class="col-md-6" id="holy_section">
+					<div id="holy_div">
+						<div class="embed-responsive embed-responsive-16by9">
+							<object class="embed-responsive-item" data="https://www.youtube.com/embed/68w22BM8oF0?list=PL2AFD3D2CBE130E60"></object>
+						</div>
+					</div>
+				</section>
+			</article>
+			<article>
+				<div>
+					<div class="col-md-5"></div>
+				    <button class="prev" onclick="plusDivs(-1)"  style="width: 80px; float: none;">❮ Prev</button>
+				    <button class="next" onclick="plusDivs(1)" style="width: 80px; float: none;">Next ❯</button>
+				    <button id="add" onclick="">Add Holy Quran</button>
+				 </div>
+			</article>
+		</article>
+	</article>
+	<footer class="row">
+		<article class="row" id="footer">
+			<section class="col-md-7">
+				<h4 style="display: inline-block;" id="rights"><strong><a style="text-decoration: none;" >&copy; All rights reserved, Badr Shahin 2017 - 2018.</a></strong></h4>
+				<nav id="terms">
+					<a>Terms & condition</a>
+					<a>Feedback</a><br>
+					<a>Question & answers</a>
+					<a>User agreement</a><br>
+				</nav>
+			</section>
+			<section class="col-md-5" id="social_icons">
+				<!-- Add font awesome icons -->
+				<a class="fa fa-github" href="https://github.com/BadrShahin" target="_blank"></a>
+				<a class="fa fa-google" href="https://plus.google.com/u/0/+BadrShahin" target="_blank"></a>
+				<a class="fa fa-linkedin" href="https://www.linkedin.com/in/badr-shahin-968997b5/" target="_blank"></a>
+				<a class="fa fa-facebook-f" href="https://www.facebook.com/BadrShahin95" target="_blank"></a>
+				<a class="fa fa-twitter" href="https://twitter.com/ShahinBadr" target="_blank"></a>
+			</section>
+		</article>
+	</footer>
+
+	<script>
+		// Get the modal
+		var loginModal = document.getElementById('displayLoginForm')
+			signModal = document.getElementById('displaySignForm');
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == loginModal) {
+		    	loginModal.style.display = "none";
+		    }
+		    if (event.target == signModal) {
+		    	 signModal.style.display = "none";
+		    }
+		}
+	</script>
+
+	//////////////////////////////////////////////////////////
+	<script>
+		var slideIndex = 1;
+
+		showDivs(slideIndex);
+		function plusDivs(n) {
+		 	showDivs(slideIndex += n);
+		}
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("holy");
+		  //var dots = document.getElementsByClassName("demo");
+		  if (n > x.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+		     x[i].style.display = "none";  
+		  }
+		  /*for (i = 0; i < dots.length; i++) {
+		     dots[i].className = dots[i].className.replace(" w3-red", "");
+		  }*/
+		  x[slideIndex-1].style.display = "block";  
+		  //dots[slideIndex-1].className += " w3-red";
+		}
+	</script>
+</body>
+</html>
